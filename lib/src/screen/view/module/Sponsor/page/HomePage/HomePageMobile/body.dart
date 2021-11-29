@@ -252,7 +252,7 @@ class containerGiaTriQuy extends StatelessWidget {
                   child: Text(
                     "VNĐ",
                     style: TextStyle(
-                      fontSize: 12,
+                      fontSize: 18,
                       color: colorAppBarSponsor,
                       fontWeight: FontWeight.w700,
                     ),
