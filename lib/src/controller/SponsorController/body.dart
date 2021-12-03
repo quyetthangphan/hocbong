@@ -159,22 +159,27 @@ class SponsorController {
   void checkLoginPhoneCaNhan() {
     String phoneCaNhan =
         Provider.of<SponsorModel>(context, listen: false).loginCaNhan == null
-            ? 'Sai'
-            : Provider.of<SponsorModel>(context, listen: false)
-                .loginCaNhan
-                .phoneNumber;
-    if (phoneCaNhan == '') {
-      chanInitScreen(1);
-    }
-
-    String phoneDoanhNghiep =
-        Provider.of<SponsorModel>(context, listen: false).loginCaNhan == null
             ? ''
             : Provider.of<SponsorModel>(context, listen: false)
                 .loginCaNhan
                 .phoneNumber;
+    print(phoneCaNhan + 'phone ca nhan');
+    if (phoneCaNhan == '') {
+      chanInitScreen(1);
+      return;
+    }
+
+    String phoneDoanhNghiep =
+        Provider.of<SponsorModel>(context, listen: false).loginDoanhNghiep ==
+                null
+            ? ''
+            : Provider.of<SponsorModel>(context, listen: false)
+                .loginDoanhNghiep
+                .phoneNumber;
+    print(phoneDoanhNghiep + 'phone danh nghiep');
     if (phoneDoanhNghiep == '') {
       chanInitScreen(1);
+      return;
     }
   }
 

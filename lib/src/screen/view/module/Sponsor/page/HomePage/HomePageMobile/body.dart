@@ -195,7 +195,7 @@ class containerGiaTriQuy extends StatelessWidget {
       left: 30,
       right: 30,
       child: Container(
-        height: size.height * 0.15,
+        height: 100,
         width: size.width * 0.35,
         padding: EdgeInsets.symmetric(horizontal: 10),
         decoration: BoxDecoration(

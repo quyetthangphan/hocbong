@@ -10,7 +10,7 @@
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		o09qc390WEqJWuyXhGt+NsB+7/4=
+		EPytoUKEHfFeQTjwjyR26zgcb/U=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
@@ -18,19 +18,15 @@
 		</data>
 		<key>flutter_assets/NOTICES.Z</key>
 		<data>
-		pQDXX3LaqUJVxnO/yVqEXPIvMjM=
+		Y0dKvQRn9e++4eV9N9g921k9rCs=
 		</data>
 		<key>flutter_assets/assets/fonts/BungeeShade-Regular.ttf</key>
 		<data>
 		0Zlw+hRhZanJj/btqKOWHpwi1Dg=
 		</data>
-		<key>flutter_assets/assets/fonts/Lobster-Regular.ttf</key>
-		<data>
-		2jmj7l5rSw0yVb/vlWAYkK/YBwk=
-		</data>
 		<key>flutter_assets/assets/image/.DS_Store</key>
 		<data>
-		iUSasWTc6dNowMidWUYpSK9zXeM=
+		K0rjodyaf4RUEdcgJWqG3qLeH/w=
 		</data>
 		<key>flutter_assets/assets/image/Cooperation.png</key>
 		<data>
@@ -56,6 +52,14 @@
 		<data>
 		cGzIAOCaxtbvbETNalfQhhIQT+4=
 		</data>
+		<key>flutter_assets/assets/image/logo.png</key>
+		<data>
+		SSa51H//3x4qAJ9KnECveg7XZbI=
+		</data>
+		<key>flutter_assets/assets/image/sponsorship.png</key>
+		<data>
+		34RCMrbmDu6TbuaQNJzXKTXaHkg=
+		</data>
 		<key>flutter_assets/assets/image/uomMam.png</key>
 		<data>
 		3j1t/1Vxo8wTwNxx4bNyphRBLd0=
@@ -70,7 +74,7 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		UlWNtTnLHRsnWHUyUodCXUWCvdM=
+		ibB3ff8N3wtJslxCU6yovm4wWxE=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -87,11 +91,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			o09qc390WEqJWuyXhGt+NsB+7/4=
+			EPytoUKEHfFeQTjwjyR26zgcb/U=
 			</data>
 			<key>hash2</key>
 			<data>
-			NIr7bzMDGnQzUwsUGvCYP+bT/4CKQYGEVwE+/aW7zX0=
+			P01pAqpzuHGFwysVk2aAwPaW4sCcZppOh+YjE1gbkp4=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
@@ -109,11 +113,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			pQDXX3LaqUJVxnO/yVqEXPIvMjM=
+			Y0dKvQRn9e++4eV9N9g921k9rCs=
 			</data>
 			<key>hash2</key>
 			<data>
-			ad6jfhp2jyLL3wny3VulD0GoCtR4Mf+dooUF6tYqtVw=
+			T/kGd4oW1XsCKK6++d24qn2Wtx5eBpTbR1/HIisMEYQ=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/fonts/BungeeShade-Regular.ttf</key>
@@ -125,17 +129,6 @@
 			<key>hash2</key>
 			<data>
 			SiEaNmB2s4Xx0bX2ALJp81YTZ/HcA6kLF97RaLm1iM8=
-			</data>
-		</dict>
-		<key>flutter_assets/assets/fonts/Lobster-Regular.ttf</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			2jmj7l5rSw0yVb/vlWAYkK/YBwk=
-			</data>
-			<key>hash2</key>
-			<data>
-			47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/image/Cooperation.png</key>
@@ -204,6 +197,28 @@
 			Rae6JxJMhc09bNwUMNBrohOQASE5MSi8nJvNP4uOb5Y=
 			</data>
 		</dict>
+		<key>flutter_assets/assets/image/logo.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			SSa51H//3x4qAJ9KnECveg7XZbI=
+			</data>
+			<key>hash2</key>
+			<data>
+			+FLMwO0g9BdJfd6Sm1QFTeRcaEi+RBt6pVE9hiAWees=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/image/sponsorship.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			34RCMrbmDu6TbuaQNJzXKTXaHkg=
+			</data>
+			<key>hash2</key>
+			<data>
+			L7XGbT89VSM415FSKQAW/jRhMzRBWUtSHluJIPtjUAo=
+			</data>
+		</dict>
 		<key>flutter_assets/assets/image/uomMam.png</key>
 		<dict>
 			<key>hash</key>
@@ -241,11 +256,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			UlWNtTnLHRsnWHUyUodCXUWCvdM=
+			ibB3ff8N3wtJslxCU6yovm4wWxE=
 			</data>
 			<key>hash2</key>
 			<data>
-			UpMGuwzEu2VNr1P5ZV9MITgE0L2Xr3drSQNM30/3nt0=
+			PLJFH7tPsJScz07cVaW9gQU63CVm3KlbYhWs1Aciwos=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
