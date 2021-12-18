@@ -2,7 +2,8 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/destop.dart';
 import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/mobile.dart';
 import 'package:flutter_request_ver2/src/screen/Sponsor.dart';
-import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/page/Baiviet/body.dart';
+import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/page/Baiviet/canhan/body.dart';
+import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/page/Baiviet/doanhnghiep/body.dart';
 import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/page/CauChuyen/body.dart';
 import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/page/HocBongCaNhan/body.dart';
 import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/page/HocBongDoanhNghiep/body.dart';
@@ -40,5 +41,6 @@ class Config {
   static List<Widget> configPageSponsorDesktop = [
     HomePageDesktop(),
     ThongTinQuyDeskTop(),
+    BaiVietDesktop(),
   ];
 }

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_request_ver2/src/controller/SponsorController/body.dart';
 import 'package:flutter_request_ver2/src/model/Sponsor/SponsorModel.dart';
-import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/component/ScaffoldMobile/component/buildMenuItems.dart';
-import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/page/Login/LoginMobile/body.dart';
 import 'package:flutter_request_ver2/src/utils/color.dart';
 import 'package:flutter_request_ver2/src/utils/dialog.dart';
 import 'package:provider/provider.dart';
@@ -116,7 +114,7 @@ class _SponsorScafolldMobileState extends State<SponsorScaffoldMobile> {
                   );
                 },
                 child: Container(
-                  color: colorTextSponsor,
+                  color: colorAppBarSponsor,
                   padding: const EdgeInsets.only(top: 5, bottom: 5, right: 5),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -152,12 +150,6 @@ class _SponsorScafolldMobileState extends State<SponsorScaffoldMobile> {
               return GestureDetector(
                 onTap: () {
                   sponsorController.checkLoginPhoneCaNhan();
-                  // Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //       builder: (context) => SponsorLoginMobile(),
-                  //     ));
-                  //sponsorController.chanInitScreen(1);
                 },
                 child: Container(
                   height: double.infinity,

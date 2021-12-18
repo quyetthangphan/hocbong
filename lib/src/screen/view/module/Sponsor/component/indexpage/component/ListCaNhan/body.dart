@@ -8,6 +8,7 @@ class ListCaNhan extends StatelessWidget {
   const ListCaNhan({Key key, this.name, this.phoneNumber, this.money, this.stt})
       : super(key: key);
 
+  // Ẩn bớt 4 ký tự của số điện thoại
   dynamic funcHiddenPhone(String newphone) {
     for (int j = 0; j < phoneNumber.length; j++) {
       newphone = phoneNumber.replaceRange(3, 7, 'xxxx');
@@ -72,8 +73,6 @@ class ListCaNhan extends StatelessWidget {
                       height: 5,
                     ),
                     Text(
-                      //'${money}đ',
-                      // ignore: unnecessary_brace_in_string_interps
                       writedMoneyCaNhanAndDoanhNghiep('${money}đ'),
                       style: TextStyle(
                         color: Colors.yellow[700],

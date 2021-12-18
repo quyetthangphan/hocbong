@@ -17,8 +17,7 @@ class _HomeState extends State<Index> {
         if (constraints.maxWidth > 600) {
           return Consumer<SponsorModel>(
             builder: (context, value, child) {
-              //return Config.configSponsorLoginDesktop[value.initSceen];
-              return Config.configSponsorLogin[value.initSceen];
+              return Config.configSponsorLoginDesktop[value.initSceen];
             },
           );
         } else

@@ -218,7 +218,6 @@ class containerGiaTriQuy extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            //SizedBox(height: size.height * 0.02),
             Text(
               "Tổng giá trị quỹ",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),

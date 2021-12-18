@@ -101,24 +101,27 @@ class _ContainerScreenLoginState extends State<ContainerScreenLogin> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                'SIGN IN',
-                style: TextStyle(
-                  color: colorAppBarSponsor,
-                  fontSize: 50,
-                  fontWeight: FontWeight.w500,
-                  shadows: [
-                    Shadow(
-                      color: Colors.white.withOpacity(1),
-                      offset: Offset(2, 5),
-                      blurRadius: 3,
-                    ),
-                    Shadow(
-                      color: colorAppBarSponsor.withOpacity(1),
-                      offset: Offset(1, 3),
-                      blurRadius: 5,
-                    ),
-                  ],
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  'SIGN IN',
+                  style: TextStyle(
+                    color: colorAppBarSponsor,
+                    fontSize: 50,
+                    fontWeight: FontWeight.w500,
+                    shadows: [
+                      Shadow(
+                        color: Colors.white.withOpacity(1),
+                        offset: Offset(2, 5),
+                        blurRadius: 3,
+                      ),
+                      Shadow(
+                        color: colorAppBarSponsor.withOpacity(1),
+                        offset: Offset(1, 3),
+                        blurRadius: 5,
+                      ),
+                    ],
+                  ),
                 ),
               ),
               SizedBox(

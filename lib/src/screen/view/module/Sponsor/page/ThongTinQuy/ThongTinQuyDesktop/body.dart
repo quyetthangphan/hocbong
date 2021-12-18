@@ -119,6 +119,7 @@ class _ThongTinQuyDeskTopState extends State<ThongTinQuyDeskTop> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               buildHoverAnimatedButton(
                                 press: () {
@@ -129,7 +130,6 @@ class _ThongTinQuyDeskTopState extends State<ThongTinQuyDeskTop> {
                                 size: size,
                                 text: "Cá nhân",
                               ),
-                              SizedBox(width: 20),
                               buildHoverAnimatedButton(
                                   press: () {
                                     sponsorController.changeInitPageHome(1);
