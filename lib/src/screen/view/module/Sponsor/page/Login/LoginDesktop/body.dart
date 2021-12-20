@@ -96,8 +96,6 @@ class _ContainerScreenLoginState extends State<ContainerScreenLogin> {
       flex: 2,
       child: SingleChildScrollView(
         child: Container(
-          //color: Colors.amber,
-          //height: size.height,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -144,7 +142,7 @@ class _ContainerScreenLoginState extends State<ContainerScreenLogin> {
               SizedBox(
                 height: 20,
               ),
-              GestureDetector(
+              InkWell(
                 onTap: () {
                   sponsorController.chanInitScreen(0);
                 },
@@ -159,6 +157,25 @@ class _ContainerScreenLoginState extends State<ContainerScreenLogin> {
                       'LOGIN',
                       style: TextStyle(fontSize: 16, color: colorBodySponsor),
                     ))),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(18),
+                child: Container(
+                  width: double.infinity,
+                  alignment: Alignment(-0.5, -0.5),
+                  child: InkWell(
+                    onTap: () {
+                      sponsorController.chanInitScreen(0);
+                    },
+                    child: Text(
+                      'Back home > > >',
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: colorAppBarSponsor.withOpacity(0.5),
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                ),
               ),
             ],
           ),

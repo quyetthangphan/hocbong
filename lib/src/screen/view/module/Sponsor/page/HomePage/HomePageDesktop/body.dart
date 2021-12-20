@@ -76,7 +76,7 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          GestureDetector(
+                          InkWell(
                             onTap: () {},
                             child: Container(
                               height: 50,
@@ -98,7 +98,9 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
                           ),
                           SizedBox(width: 100),
                           InkWell(
-                            onTap: () {},
+                            onTap: () {
+                              sponsorController.changeInitPageHome(2);
+                            },
                             child: Container(
                               height: 50,
                               width: size.width * 0.1,

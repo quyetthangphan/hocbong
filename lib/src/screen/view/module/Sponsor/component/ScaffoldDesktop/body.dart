@@ -121,16 +121,14 @@ class _SponsorScaffoldDesktopState extends State<SponsorScaffoldDesktop> {
                         ),
                       );
                     } else {
-                      return GestureDetector(
+                      return InkWell(
                         onTap: () {
                           sponsorController.checkLoginPhoneCaNhan();
                         },
-                        child: InkWell(
-                          child: Center(
-                              child: Text('Đăng nhập',
-                                  style: TextStyle(
-                                      color: colorBodySponsor, fontSize: 16))),
-                        ),
+                        child: Center(
+                            child: Text('Đăng nhập',
+                                style: TextStyle(
+                                    color: colorBodySponsor, fontSize: 16))),
                       );
                     }
                   },
