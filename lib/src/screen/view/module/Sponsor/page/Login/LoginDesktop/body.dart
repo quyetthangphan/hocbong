@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_request_ver2/src/controller/SponsorController/body.dart';
 import 'package:flutter_request_ver2/src/utils/color.dart';
 import 'package:flutter_request_ver2/src/utils/icons.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SponsorLoginDesktop extends StatefulWidget {
   const SponsorLoginDesktop({Key key}) : super(key: key);
@@ -127,16 +128,28 @@ class _ContainerScreenLoginState extends State<ContainerScreenLogin> {
               ),
               Container(
                 margin: EdgeInsets.symmetric(horizontal: 100),
-                child: TextField(
-                  keyboardType: TextInputType.name,
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.account_circle),
-                    labelText: 'PHONE',
-                  ),
-                  onChanged: (String value) {
-                    sponsorController.changInitLoginPageCaNhan(value);
-                  },
+                child: Column(
+                  children: [
+                    TextField(
+                      keyboardType: TextInputType.name,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        prefixIcon: Icon(Icons.account_circle),
+                        hintText: 'Phone',
+                      ),
+                      onChanged: (String value) {
+                        sponsorController.changInitLoginPageCaNhan(value);
+                      },
+                    ),
+                    SizedBox(height: 16),
+                    TextField(
+                      decoration: const InputDecoration(
+                        border: OutlineInputBorder(),
+                        prefixIcon: Icon(Icons.lock),
+                        hintText: 'Password',
+                      ),
+                    ),
+                  ],
                 ),
               ),
               SizedBox(

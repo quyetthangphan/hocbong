@@ -80,6 +80,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "ffi",
+      "rootUri": "file:///Users/macbookpro/Documents/my_train/flutter/.pub-cache/hosted/pub.dartlang.org/ffi-1.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "file",
+      "rootUri": "file:///Users/macbookpro/Documents/my_train/flutter/.pub-cache/hosted/pub.dartlang.org/file-6.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter",
       "rootUri": "file:///Users/macbookpro/Documents/my_train/flutter/packages/flutter",
       "packageUri": "lib/",
@@ -98,6 +110,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "google_fonts",
+      "rootUri": "file:///Users/macbookpro/Documents/my_train/flutter/.pub-cache/hosted/pub.dartlang.org/google_fonts-2.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "googleapis",
       "rootUri": "file:///Users/macbookpro/Documents/my_train/flutter/.pub-cache/hosted/pub.dartlang.org/googleapis-3.0.0",
       "packageUri": "lib/",
@@ -106,6 +124,12 @@
     {
       "name": "googleapis_auth",
       "rootUri": "file:///Users/macbookpro/Documents/my_train/flutter/.pub-cache/hosted/pub.dartlang.org/googleapis_auth-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "group_radio_button",
+      "rootUri": "file:///Users/macbookpro/Documents/my_train/flutter/.pub-cache/hosted/pub.dartlang.org/group_radio_button-1.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -164,6 +188,36 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "path_provider",
+      "rootUri": "file:///Users/macbookpro/Documents/my_train/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "path_provider_linux",
+      "rootUri": "file:///Users/macbookpro/Documents/my_train/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "path_provider_macos",
+      "rootUri": "file:///Users/macbookpro/Documents/my_train/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-2.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "path_provider_platform_interface",
+      "rootUri": "file:///Users/macbookpro/Documents/my_train/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_platform_interface-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "path_provider_windows",
+      "rootUri": "file:///Users/macbookpro/Documents/my_train/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "pedantic",
       "rootUri": "file:///Users/macbookpro/Documents/my_train/flutter/.pub-cache/hosted/pub.dartlang.org/pedantic-1.11.1",
       "packageUri": "lib/",
@@ -172,6 +226,24 @@
     {
       "name": "petitparser",
       "rootUri": "file:///Users/macbookpro/Documents/my_train/flutter/.pub-cache/hosted/pub.dartlang.org/petitparser-4.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "platform",
+      "rootUri": "file:///Users/macbookpro/Documents/my_train/flutter/.pub-cache/hosted/pub.dartlang.org/platform-3.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "plugin_platform_interface",
+      "rootUri": "file:///Users/macbookpro/Documents/my_train/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-2.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "process",
+      "rootUri": "file:///Users/macbookpro/Documents/my_train/flutter/.pub-cache/hosted/pub.dartlang.org/process-4.2.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -248,6 +320,18 @@
       "languageVersion": "2.14"
     },
     {
+      "name": "win32",
+      "rootUri": "file:///Users/macbookpro/Documents/my_train/flutter/.pub-cache/hosted/pub.dartlang.org/win32-2.0.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "xdg_directories",
+      "rootUri": "file:///Users/macbookpro/Documents/my_train/flutter/.pub-cache/hosted/pub.dartlang.org/xdg_directories-0.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "xml",
       "rootUri": "file:///Users/macbookpro/Documents/my_train/flutter/.pub-cache/hosted/pub.dartlang.org/xml-5.1.2",
       "packageUri": "lib/",
@@ -266,7 +350,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-12-20T11:14:54.509184Z",
+  "generated": "2022-01-03T06:47:51.280182Z",
   "generator": "pub",
   "generatorVersion": "2.15.0"
 }

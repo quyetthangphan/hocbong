@@ -1,9 +1,14 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_request_ver2/src/controller/SponsorController/body.dart';
 import 'package:flutter_request_ver2/src/model/Sponsor/OTD/CaNhanOTD.dart';
 import 'package:flutter_request_ver2/src/model/Sponsor/OTD/ChiTietOTD.dart';
 import 'package:flutter_request_ver2/src/model/Sponsor/OTD/DoanhNghiepOTD.dart';
 import 'package:flutter_request_ver2/src/model/Sponsor/OTD/SumSponsorOTD.dart';
+import 'package:http/http.dart' as http;
+
+import 'OTD/DangKyOTD.dart';
 
 class SponsorModel extends ChangeNotifier {
   List<SumSponsorOTD> listSumSponsor = [];
@@ -111,6 +116,22 @@ class SponsorModel extends ChangeNotifier {
       case 1:
         sponsorController.changeInitPageHome(7);
         break;
+    }
+  }
+
+  Future<DangKyOTD> sendRequest({@required DangKyOTD dangkyOTD}) async {
+    var url = Uri.parse('${'link'}');
+
+    var response = await http.post(url, body: dangkyOTD.toJson());
+
+    print('Response status: ${response.statusCode}');
+    print('Response body: ${response.body}');
+
+    if (response.statusCode != 200) {
+      return null;
+    }
+    if (jsonDecode(response.body)['err'] != 0) {
+      return null;
     }
   }
 }

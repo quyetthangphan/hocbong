@@ -39,6 +39,7 @@ class _SponsorScaffoldDesktopState extends State<SponsorScaffoldDesktop> {
               MenuItems(
                 title: "Trang chủ",
                 press: () {
+                  setState(() {});
                   sponsorController.changeInitPageHome(0);
                 },
               ),
@@ -151,10 +152,12 @@ class _SponsorScaffoldDesktopState extends State<SponsorScaffoldDesktop> {
 class MenuItems extends StatelessWidget {
   final String title;
   final Function press;
+  bool isText;
   MenuItems({
     Key key,
     this.press,
     this.title,
+    this.isText = false,
   }) : super(key: key);
 
   @override

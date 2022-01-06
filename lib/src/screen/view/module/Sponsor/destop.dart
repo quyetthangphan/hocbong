@@ -4,6 +4,10 @@ import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/component/Sc
 import 'package:flutter_request_ver2/src/utils/config.dart';
 import 'package:provider/provider.dart';
 
+import 'page/Login/LoginDesktop/body.dart';
+import 'page/dangky/body.dart';
+import 'page/showlistthuhuong/body.dart';
+
 class SponsorPageDesktop extends StatelessWidget {
   const SponsorPageDesktop({Key key}) : super(key: key);
 
@@ -12,7 +16,10 @@ class SponsorPageDesktop extends StatelessWidget {
     return SponsorScaffoldDesktop(
       child: Consumer<SponsorModel>(
         builder: (context, value, child) {
-          return Config.configPageSponsorDesktop[value.initSponsor];
+          //return Config.configPageSponsorDesktop[value.initSponsor];
+          //return ShowListThuHuong();
+          return DangKy();
+          //return SponsorLoginDesktop();
         },
       ),
     );
