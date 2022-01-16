@@ -73,7 +73,7 @@ class ListCaNhan extends StatelessWidget {
                       height: 5,
                     ),
                     Text(
-                      writedMoneyCaNhanAndDoanhNghiep('${money}đ'),
+                      '${writedMoneyCaNhanAndDoanhNghiep(money)}đ',
                       style: TextStyle(
                         color: Colors.yellow[700],
                         fontSize: 12,

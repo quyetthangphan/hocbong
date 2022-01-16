@@ -7,6 +7,7 @@ import 'package:provider/provider.dart';
 import 'page/Login/LoginDesktop/body.dart';
 import 'page/dangky/body.dart';
 import 'page/showlistthuhuong/body.dart';
+import 'page/transaction/body.dart';
 
 class SponsorPageDesktop extends StatelessWidget {
   const SponsorPageDesktop({Key key}) : super(key: key);
@@ -16,9 +17,9 @@ class SponsorPageDesktop extends StatelessWidget {
     return SponsorScaffoldDesktop(
       child: Consumer<SponsorModel>(
         builder: (context, value, child) {
-          //return Config.configPageSponsorDesktop[value.initSponsor];
-          //return ShowListThuHuong();
-          return DangKy();
+          return Config.configPageSponsorDesktop[value.initSponsor];
+          //return Transaction();
+          //return DangKy();
           //return SponsorLoginDesktop();
         },
       ),

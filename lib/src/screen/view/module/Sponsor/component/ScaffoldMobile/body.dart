@@ -30,7 +30,7 @@ class _SponsorScafolldMobileState extends State<SponsorScaffoldMobile> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    _width = size.width;
+    //_width = size.width;
     sponsorController = SponsorController(context: context);
 
     return Scaffold(

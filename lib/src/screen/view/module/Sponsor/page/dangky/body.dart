@@ -26,246 +26,230 @@ class _DangKyState extends State<DangKy> {
       backgroundColor: Colors.blue[100],
       body: Form(
         key: formKey,
-        child: Align(
-          alignment: Alignment.center,
+        child: SingleChildScrollView(
           child: Container(
-            height: double.infinity,
-            width: size.width * 0.46,
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  SizedBox(height: 20),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(8),
-                    child: Container(
-                      color: colorTextSponsor,
-                      width: double.infinity,
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 16, vertical: 22),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Thông tin tài trợ',
-                            style: GoogleFonts.cormorantGaramond(
-                              fontSize: 32,
-                              fontWeight: FontWeight.w500,
-                            ),
+            width: double.infinity,
+            margin:
+                EdgeInsets.symmetric(horizontal: size.width > 600 ? 300 : 20),
+            child: Column(
+              children: [
+                SizedBox(height: 20),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: Container(
+                    color: colorTextSponsor,
+                    width: double.infinity,
+                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 22),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Thông tin tài trợ',
+                          style: GoogleFonts.cormorantGaramond(
+                            fontSize: 32,
+                            fontWeight: FontWeight.w500,
                           ),
-                          SizedBox(height: 10),
-                          Text(
-                            'Dự án cộng đồng, phần mềm lưu trữ và quản lý tài trợ. Với chúng tôi đây là một đam mê ' +
-                                '\n' +
-                                'cháy bỏng, luôn muốn học hỏi và làm việc hết mình với những dự án. ' +
-                                '\n' +
-                                'Một lần nữa, chúng tôi thay mặt các bạn học sinh, sinh viên (danh sách công bố khi được ' +
-                                '\n' +
-                                'nhận học bổng) chân thành cảm ơn.',
-                            textScaleFactor: 1,
-                            style: GoogleFonts.roboto(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
-                              wordSpacing: 2,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(8),
-                    child: Container(
-                      color: colorTextSponsor,
-                      //height: size.height * 0.2,
-                      width: double.infinity,
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Vai trò của anh/chị',
-                            style: GoogleFonts.nunito(fontSize: 16),
-                          ),
-                          SizedBox(height: 6),
-                          RadioGroup<String>.builder(
-                            spacebetween: 40,
-                            groupValue: _verticalGroupValue,
-                            onChanged: (value) => setState(() {
-                              _verticalGroupValue = value;
-                            }),
-                            items: _status,
-                            itemBuilder: (item) => RadioButtonBuilder(
-                              item,
-                            ),
-                            activeColor: Colors.blue,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(8),
-                    child: Container(
-                      color: colorTextSponsor,
-                      width: double.infinity,
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Họ và tên',
-                            style: GoogleFonts.nunito(fontSize: 16),
-                          ),
-                          SizedBox(height: 20),
-                          Text(
-                              'Nếu là Vai trò của anh/chị là tổ chức thì họ tên là người đại diện'),
-                          SizedBox(height: 20),
-                          _buildName(),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(8),
-                    child: Container(
-                      color: colorTextSponsor,
-                      width: double.infinity,
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Số điện thoại',
-                            style: GoogleFonts.nunito(fontSize: 16),
-                          ),
-                          SizedBox(height: 20),
-                          Text(
-                              'Nếu là Vai trò của anh/chị là tổ chức thì số điện thoại là người đại diện. Ngoài ra, số điện thoại được dùng để truy vấn học bổng.'),
-                          SizedBox(height: 20),
-                          _buildPhone(),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(8),
-                    child: Container(
-                      color: colorTextSponsor,
-                      width: double.infinity,
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Mật khẩu',
-                            style: GoogleFonts.nunito(fontSize: 16),
-                          ),
-                          SizedBox(height: 20),
-                          Text('Anh/chị vui lòng nhớ mật khẩu mình đăng ký.'),
-                          SizedBox(height: 20),
-                          _buildPasss(),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(8),
-                    child: Container(
-                      color: colorTextSponsor,
-                      width: double.infinity,
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Email',
-                            style: GoogleFonts.nunito(fontSize: 16),
-                          ),
-                          SizedBox(height: 20),
-                          Text(
-                              'Nếu là Vai trò của anh/chị là tổ chức thì email là người đại diện. Ngoài ra, số điện thoại được dùng để truy vấn học bổng.'),
-                          SizedBox(height: 20),
-                          _buildEmail(),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(8),
-                    child: Container(
-                      color: colorTextSponsor,
-                      width: double.infinity,
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Địa chỉ',
-                            style: GoogleFonts.nunito(fontSize: 16),
-                          ),
-                          SizedBox(height: 20),
-                          Text(
-                              'Nếu là Vai trò của anh/chị là tổ chức thì địa chỉ là tổ chức.'),
-                          SizedBox(height: 20),
-                          _buildAddress(),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      InkWell(
-                        onTap: () {
-                          final isValide = formKey.currentState.validate();
-                          if (isValide) {
-                            formKey.currentState.save();
-                          }
-                          dk.investor = _verticalGroupValue;
-                          print(dk.toJson());
-                        },
-                        child: Ink(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(6),
-                            color: Colors.blue[600],
-                          ),
-                          width: 72,
-                          height: 36,
-                          child: Center(
-                              child: Text(
-                            'Gửi',
-                            style: GoogleFonts.nunito(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w700,
-                                color: Colors.white),
-                          )),
                         ),
-                      ),
-                      InkWell(
-                          onTap: () {},
-                          child: Text(
-                            'Xoá hết câu trả lời',
-                            style:
-                                GoogleFonts.nunito(color: colorAppBarSponsor),
-                          ))
-                    ],
+                        SizedBox(height: 10),
+                        Text(
+                          'Dự án cộng đồng, phần mềm lưu trữ và quản lý tài trợ. Với chúng tôi đây là một đam mê ' +
+                              '\n' +
+                              'cháy bỏng, luôn muốn học hỏi và làm việc hết mình với những dự án. ' +
+                              '\n' +
+                              'Một lần nữa, chúng tôi thay mặt các bạn học sinh, sinh viên (danh sách công bố khi được ' +
+                              '\n' +
+                              'nhận học bổng) chân thành cảm ơn.',
+                          textScaleFactor: 1,
+                          style: GoogleFonts.roboto(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            wordSpacing: 2,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                  SizedBox(height: 36),
-                ],
-              ),
+                ),
+                SizedBox(height: 20),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: Container(
+                    color: colorTextSponsor,
+                    //height: size.height * 0.2,
+                    width: double.infinity,
+                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Vai trò của anh/chị',
+                          style: GoogleFonts.nunito(fontSize: 16),
+                        ),
+                        SizedBox(height: 6),
+                        RadioGroup<String>.builder(
+                          spacebetween: 40,
+                          groupValue: _verticalGroupValue,
+                          onChanged: (value) => setState(() {
+                            _verticalGroupValue = value;
+                          }),
+                          items: _status,
+                          itemBuilder: (item) => RadioButtonBuilder(
+                            item,
+                          ),
+                          activeColor: Colors.blue,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: Container(
+                    color: colorTextSponsor,
+                    width: double.infinity,
+                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Họ và tên',
+                          style: GoogleFonts.nunito(fontSize: 16),
+                        ),
+                        SizedBox(height: 20),
+                        Text(
+                            'Nếu là Vai trò của anh/chị là tổ chức thì họ tên là người đại diện'),
+                        SizedBox(height: 20),
+                        _buildName(),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: Container(
+                    color: colorTextSponsor,
+                    width: double.infinity,
+                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Số điện thoại',
+                          style: GoogleFonts.nunito(fontSize: 16),
+                        ),
+                        SizedBox(height: 20),
+                        Text(
+                            'Nếu là Vai trò của anh/chị là tổ chức thì số điện thoại là người đại diện. Ngoài ra, số điện thoại được dùng để truy vấn học bổng.'),
+                        SizedBox(height: 20),
+                        _buildPhone(),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: Container(
+                    color: colorTextSponsor,
+                    width: double.infinity,
+                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Mật khẩu',
+                          style: GoogleFonts.nunito(fontSize: 16),
+                        ),
+                        SizedBox(height: 20),
+                        Text('Anh/chị vui lòng nhớ mật khẩu mình đăng ký.'),
+                        SizedBox(height: 20),
+                        _buildPasss(),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: Container(
+                    color: colorTextSponsor,
+                    width: double.infinity,
+                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Email',
+                          style: GoogleFonts.nunito(fontSize: 16),
+                        ),
+                        SizedBox(height: 20),
+                        Text(
+                            'Nếu là Vai trò của anh/chị là tổ chức thì email là người đại diện. Ngoài ra, số điện thoại được dùng để truy vấn học bổng.'),
+                        SizedBox(height: 20),
+                        _buildEmail(),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: Container(
+                    color: colorTextSponsor,
+                    width: double.infinity,
+                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Địa chỉ',
+                          style: GoogleFonts.nunito(fontSize: 16),
+                        ),
+                        SizedBox(height: 20),
+                        Text(
+                            'Nếu là Vai trò của anh/chị là tổ chức thì địa chỉ là tổ chức.'),
+                        SizedBox(height: 20),
+                        _buildAddress(),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        final isValide = formKey.currentState.validate();
+                        if (isValide) {
+                          formKey.currentState.save();
+                        }
+                        dk.investor = _verticalGroupValue;
+                        print(dk.toJson());
+                      },
+                      child: Ink(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(6),
+                          color: Colors.blue[600],
+                        ),
+                        width: 72,
+                        height: 36,
+                        child: Center(
+                            child: Text(
+                          'Gửi',
+                          style: GoogleFonts.nunito(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w700,
+                              color: Colors.white),
+                        )),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 36),
+              ],
             ),
           ),
         ),
@@ -333,9 +317,9 @@ class _DangKyState extends State<DangKy> {
           final regExp = RegExp(pattern);
 
           if (value.isEmpty) {
-            return 'Enter an email';
+            return 'Nhập một gmail';
           } else if (!regExp.hasMatch(value)) {
-            return 'Enter a valid email';
+            return 'Nhập gmail hợp lệ';
           } else {
             return null;
           }

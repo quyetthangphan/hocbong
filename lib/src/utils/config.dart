@@ -4,7 +4,6 @@ import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/mobile.dart'
 import 'package:flutter_request_ver2/src/screen/Sponsor.dart';
 import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/page/Baiviet/canhan/body.dart';
 import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/page/Baiviet/doanhnghiep/body.dart';
-import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/page/CauChuyen/body.dart';
 import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/page/HocBongCaNhan/body.dart';
 import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/page/HocBongDoanhNghiep/body.dart';
 import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/page/HomePage/HomePageDesktop/body.dart';
@@ -14,6 +13,9 @@ import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/page/Login/L
 import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/page/ThongTinQuy/ThongTinQuyDesktop/body.dart';
 import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/page/ThongTinQuy/ThongTinQuyMobile/SponsorDanhSachCaNhan.dart';
 import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/page/ThongTinQuy/ThongTinQuyMobile/SponsorDanhSachDoanhNghiep.dart';
+import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/page/dangky/body.dart';
+import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/page/showlistthuhuong/body.dart';
+import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/page/transaction/body.dart';
 
 class Config {
   static List<Widget> configModule = [Sponsor()];
@@ -25,7 +27,6 @@ class Config {
     SponsorTongQuanChiTietChuongTrinh(),
     SponsorListHocBongCaNhan(),
     SponsorListHocBongDoanhNhgiep(),
-    SponsorCauChuyen(),
   ];
 
   static List<Widget> configSponsorLogin = [
@@ -42,5 +43,8 @@ class Config {
     HomePageDesktop(),
     ThongTinQuyDeskTop(),
     BaiVietDesktop(),
+    DangKy(),
+    ShowListThuHuong(),
+    Transaction(),
   ];
 }

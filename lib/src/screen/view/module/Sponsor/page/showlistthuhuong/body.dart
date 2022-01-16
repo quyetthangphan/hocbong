@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_request_ver2/src/model/Sponsor/OTD/DangKyOTD.dart';
 import 'package:flutter_request_ver2/src/utils/color.dart';
 
-class ShowListThuHuong extends StatelessWidget {
-  final String name;
-  final String phone;
-  final String wallet;
-  final String address;
-  ShowListThuHuong({Key key, this.name, this.phone, this.wallet, this.address})
-      : super(key: key);
+class ShowListThuHuong extends StatefulWidget {
+  // final String name;
+  // final String phone;
+  // final String wallet;
+  // final String address;
+  ShowListThuHuong({Key key}) : super(key: key);
+
+  @override
+  _ShowListThuHuongState createState() => _ShowListThuHuongState();
+}
+
+class _ShowListThuHuongState extends State<ShowListThuHuong> {
+  DangKyOTD dk = DangKyOTD();
 
   @override
   Widget build(BuildContext context) {

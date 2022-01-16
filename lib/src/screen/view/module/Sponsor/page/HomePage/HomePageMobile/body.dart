@@ -222,43 +222,47 @@ class containerGiaTriQuy extends StatelessWidget {
               "Tổng giá trị quỹ",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
             ),
-            FittedBox(
-              child:
-                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                Consumer<SponsorModel>(builder: (context, value, child) {
-                  return Text(
-                    funcSumValue(value.listSumSponsor),
-                    style: TextStyle(
-                      fontSize: size.height * 0.05,
-                      color: colorAppBarSponsor,
-                      shadows: [
-                        Shadow(
-                          color: Colors.white.withOpacity(1),
-                          offset: Offset(2, 5),
-                          blurRadius: 3,
-                        ),
-                        Shadow(
-                          color: colorAppBarSponsor.withOpacity(1),
-                          offset: Offset(1, 3),
-                          blurRadius: 5,
-                        ),
-                      ],
-                    ),
-                  );
-                }),
-                Padding(
-                  padding: const EdgeInsets.only(left: 0, bottom: 16),
-                  child: Text(
-                    "VNĐ",
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: colorAppBarSponsor,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                ),
-              ]),
-            ),
+            Consumer<SponsorModel>(builder: (context, value, child) {
+              return value.listSumSponsor.length > 0
+                  ? FittedBox(
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              funcSumValue(value.listSumSponsor),
+                              style: TextStyle(
+                                fontSize: size.height * 0.05,
+                                color: colorAppBarSponsor,
+                                shadows: [
+                                  Shadow(
+                                    color: Colors.white.withOpacity(1),
+                                    offset: Offset(2, 5),
+                                    blurRadius: 3,
+                                  ),
+                                  Shadow(
+                                    color: colorAppBarSponsor.withOpacity(1),
+                                    offset: Offset(1, 3),
+                                    blurRadius: 5,
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 0, bottom: 16),
+                              child: Text(
+                                "VNĐ",
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  color: colorAppBarSponsor,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                            ),
+                          ]),
+                    )
+                  : SizedBox();
+            }),
             SizedBox(height: size.height * 0.01),
           ],
         ),

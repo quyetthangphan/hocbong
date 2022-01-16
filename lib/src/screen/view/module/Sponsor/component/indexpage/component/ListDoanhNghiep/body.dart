@@ -76,7 +76,7 @@ class ListDoanhNghiep extends StatelessWidget {
                             height: 5,
                           ),
                           Text(
-                            writedMoneyCaNhanAndDoanhNghiep(money),
+                            '${writedMoneyCaNhanAndDoanhNghiep(money)}đ',
                             style: TextStyle(
                               color: Colors.yellow[700],
                               fontSize: 12,

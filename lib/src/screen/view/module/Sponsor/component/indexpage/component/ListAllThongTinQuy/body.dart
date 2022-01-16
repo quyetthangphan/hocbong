@@ -2,16 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter_request_ver2/src/controller/SponsorController/body.dart';
 import 'package:flutter_request_ver2/src/utils/color.dart';
 
-class ListAllThongTinCaNhanAndDoanhNghiep extends StatelessWidget {
+class ListAllThongTinCaNhanAndDoanhNghiep extends StatefulWidget {
   final String name, phoneNumber, money;
   final int stt;
   ListAllThongTinCaNhanAndDoanhNghiep(
       {Key key, this.name, this.phoneNumber, this.money, this.stt})
       : super(key: key);
 
+  @override
+  _ListAllThongTinCaNhanAndDoanhNghiepState createState() =>
+      _ListAllThongTinCaNhanAndDoanhNghiepState();
+}
+
+class _ListAllThongTinCaNhanAndDoanhNghiepState
+    extends State<ListAllThongTinCaNhanAndDoanhNghiep> {
   dynamic funcHiddenPhone(String newphone) {
-    for (int j = 0; j < phoneNumber.length; j++) {
-      newphone = phoneNumber.replaceRange(3, 7, 'xxxx');
+    for (int j = 0; j < widget.phoneNumber.length; j++) {
+      newphone = widget.phoneNumber.replaceRange(3, 7, 'xxxx');
     }
     return newphone;
   }
@@ -62,7 +69,7 @@ class ListAllThongTinCaNhanAndDoanhNghiep extends StatelessWidget {
                 child: Center(
                     child: FittedBox(
                   child: Text(
-                    writedMoneyCaNhanAndDoanhNghiep(money),
+                    '${writedMoneyCaNhanAndDoanhNghiep(widget.money)}đ',
                     style: TextStyle(
                         color: colorAppBarSponsor,
                         fontSize: size.height * 0.03,
@@ -79,12 +86,12 @@ class ListAllThongTinCaNhanAndDoanhNghiep extends StatelessWidget {
                 children: [
                   Expanded(
                     flex: 1,
-                    child: Text('$name'),
+                    child: Text('${widget.name}'),
                   ),
                   Expanded(
                     flex: 1,
                     child: Text(
-                      funcHiddenPhone('$phoneNumber'),
+                      funcHiddenPhone('${widget.phoneNumber}'),
                     ),
                   ),
                 ],
