@@ -29,7 +29,7 @@ class _SponsorLoginState extends State<SponsorLoginMobile> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Text(
-                'SIGN IN',
+                'Đăng nhập',
                 style: TextStyle(
                     fontSize: 30,
                     color: colorAppBarSponsor,

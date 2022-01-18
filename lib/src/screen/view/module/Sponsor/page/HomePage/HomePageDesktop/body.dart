@@ -1,21 +1,35 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_request_ver2/src/controller/SponsorController/body.dart';
+import 'package:flutter_request_ver2/src/model/Sponsor/OTD/transactionOTD.dart';
 import 'package:flutter_request_ver2/src/model/Sponsor/SponsorModel.dart';
 import 'package:flutter_request_ver2/src/utils/color.dart';
 import 'package:flutter_request_ver2/src/utils/icons.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class HomePageDesktop extends StatefulWidget {
-  const HomePageDesktop({Key key}) : super(key: key);
+  HomePageDesktop({Key key}) : super(key: key);
 
   @override
   _HomePageDesktopState createState() => _HomePageDesktopState();
 }
 
 class _HomePageDesktopState extends State<HomePageDesktop> {
+  List<TransactionOTD> transaction = [];
   SponsorController sponsorController;
+
+  @override
+  void initState() {
+    super.initState();
+    sponsorController = SponsorController(context: context);
+    sponsorController.getBook().then((value) {
+      if (value.length > 0) {
+        transaction = value;
+        setState(() {});
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -152,7 +166,7 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
                                 ),
                               ]),
                           child: ListView.builder(
-                            itemCount: 9,
+                            itemCount: transaction.length,
                             itemBuilder: (context, index) {
                               return Padding(
                                 padding: const EdgeInsets.only(
@@ -186,7 +200,7 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
                                                   child: Container(
                                                     width: size.width * 0.1,
                                                     child: Text(
-                                                      '0x3180ff7b36941b169845d0x3180ff7b36941b169845d0x3180ff7b36941b169845d',
+                                                      transaction[index].tx,
                                                       overflow:
                                                           TextOverflow.ellipsis,
                                                       style: TextStyle(
@@ -195,9 +209,12 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
                                                     ),
                                                   ),
                                                 ),
-                                                Text('52 sec',
+                                                Text('52 secs ago',
                                                     style: TextStyle(
-                                                        fontSize: 11)),
+                                                        fontSize: 11,
+                                                        color: Colors.grey
+                                                            .withOpacity(
+                                                                0.75))),
                                               ],
                                             )
                                           ],
@@ -208,14 +225,19 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
                                           children: [
                                             Row(
                                               children: [
-                                                Text('Form'),
+                                                Text(
+                                                  'From',
+                                                  style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.w700),
+                                                ),
                                                 SizedBox(width: 5),
                                                 InkWell(
                                                   onTap: () {},
                                                   child: Container(
                                                     width: size.width * 0.15,
                                                     child: Text(
-                                                      '0x3180ff7b36941b169845d0x3180ff7b36941b169845d0x3180ff7b36941b169845d',
+                                                      transaction[index].from,
                                                       overflow:
                                                           TextOverflow.ellipsis,
                                                       style: TextStyle(
@@ -228,14 +250,17 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
                                             ),
                                             Row(
                                               children: [
-                                                Text('To'),
+                                                Text('To',
+                                                    style: TextStyle(
+                                                        fontWeight:
+                                                            FontWeight.w700)),
                                                 SizedBox(width: 5),
                                                 InkWell(
                                                   onTap: () {},
                                                   child: Container(
                                                     width: size.width * 0.15,
                                                     child: Text(
-                                                      '0x3180ff7b36941b169845d0x3180ff7b36941b169845d0x3180ff7b36941b169845d',
+                                                      transaction[index].to,
                                                       overflow:
                                                           TextOverflow.ellipsis,
                                                       style: TextStyle(
@@ -251,9 +276,12 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
                                         Container(
                                           color: Colors.grey.withOpacity(0.25),
                                           child: Center(
-                                            child: Text('0.065 Eth',
-                                                style:
-                                                    TextStyle(fontSize: 11.2)),
+                                            child: Text(
+                                                '${transaction[index].value} Eth',
+                                                style: TextStyle(
+                                                    fontSize: 11.2,
+                                                    color: Colors.black
+                                                        .withOpacity(0.5))),
                                           ),
                                         ),
                                       ],
@@ -279,95 +307,107 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
                     Container(
                       height: size.height * 1 / 2,
                       width: size.width * 1 / 2,
-                      child: Align(
-                        alignment: Alignment.center,
-                        child: Container(
-                          height: size.height * 0.17,
-                          width: size.width * 0.35,
-                          decoration: BoxDecoration(
-                            color: colorBodySponsor,
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(20),
-                            ),
-                            shape: BoxShape.rectangle,
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.white.withOpacity(1),
-                                offset: Offset(0, 0),
-                                blurRadius: 10,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text('Quy đỗi: 1Eth ~ 72623.88 VNĐ',
+                              style: GoogleFonts.oswald(
+                                  color: Colors.black.withOpacity(0.4),
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.w700)),
+                          SizedBox(height: 14),
+                          Container(
+                            height: size.height * 0.17,
+                            width: size.width * 0.35,
+                            decoration: BoxDecoration(
+                              color: colorBodySponsor,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(20),
                               ),
-                              BoxShadow(
-                                color: colorAppBarSponsor.withOpacity(1),
-                                offset: Offset(0, 0),
-                                blurRadius: 10,
-                              ),
-                            ],
-                          ),
-                          child: Column(
-                            children: [
-                              SizedBox(height: size.height * 0.02),
-                              FittedBox(
-                                child: Text(
-                                  "Tổng giá trị quỹ",
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w300),
+                              shape: BoxShape.rectangle,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.white.withOpacity(1),
+                                  offset: Offset(0, 0),
+                                  blurRadius: 10,
                                 ),
-                              ),
-                              SizedBox(height: size.height * 0.01),
-                              Consumer<SponsorModel>(
-                                  builder: (context, value, child) {
-                                return value.listSumSponsor.length > 0
-                                    ? FittedBox(
-                                        child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: [
-                                              Text(
-                                                funcSumValue(
-                                                    value.listSumSponsor),
-                                                style: TextStyle(
-                                                  fontSize: size.height * 0.065,
-                                                  color: colorAppBarSponsor,
-                                                  shadows: [
-                                                    Shadow(
-                                                      color: Colors.white
-                                                          .withOpacity(1),
-                                                      offset: Offset(2, 5),
-                                                      blurRadius: 3,
-                                                    ),
-                                                    Shadow(
-                                                      color: colorAppBarSponsor
-                                                          .withOpacity(1),
-                                                      offset: Offset(1, 3),
-                                                      blurRadius: 5,
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                              Container(
-                                                padding:
-                                                    EdgeInsets.only(bottom: 20),
-                                                child: FittedBox(
-                                                  child: Text(
-                                                    "VNĐ",
-                                                    style: TextStyle(
-                                                      fontSize:
-                                                          size.width * 0.012,
-                                                      color: colorAppBarSponsor,
-                                                      fontWeight:
-                                                          FontWeight.w700,
-                                                    ),
+                                BoxShadow(
+                                  color: colorAppBarSponsor.withOpacity(1),
+                                  offset: Offset(0, 0),
+                                  blurRadius: 10,
+                                ),
+                              ],
+                            ),
+                            child: Column(
+                              children: [
+                                SizedBox(height: size.height * 0.02),
+                                FittedBox(
+                                  child: Text(
+                                    "Tổng giá trị quỹ",
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w300),
+                                  ),
+                                ),
+                                SizedBox(height: size.height * 0.01),
+                                Consumer<SponsorModel>(
+                                    builder: (context, value, child) {
+                                  return value.listSumSponsor.length > 0
+                                      ? FittedBox(
+                                          child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Text(
+                                                  funcSumValue(
+                                                      value.listSumSponsor),
+                                                  style: TextStyle(
+                                                    fontSize:
+                                                        size.height * 0.065,
+                                                    color: colorAppBarSponsor,
+                                                    shadows: [
+                                                      Shadow(
+                                                        color: Colors.white
+                                                            .withOpacity(1),
+                                                        offset: Offset(2, 5),
+                                                        blurRadius: 3,
+                                                      ),
+                                                      Shadow(
+                                                        color:
+                                                            colorAppBarSponsor
+                                                                .withOpacity(1),
+                                                        offset: Offset(1, 3),
+                                                        blurRadius: 5,
+                                                      ),
+                                                    ],
                                                   ),
                                                 ),
-                                              )
-                                            ]),
-                                      )
-                                    : SizedBox();
-                              }),
-                            ],
+                                                Container(
+                                                  padding: EdgeInsets.only(
+                                                      bottom: 20),
+                                                  child: FittedBox(
+                                                    child: Text(
+                                                      "VNĐ",
+                                                      style: TextStyle(
+                                                        fontSize:
+                                                            size.width * 0.012,
+                                                        color:
+                                                            colorAppBarSponsor,
+                                                        fontWeight:
+                                                            FontWeight.w700,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                )
+                                              ]),
+                                        )
+                                      : SizedBox();
+                                }),
+                              ],
+                            ),
                           ),
-                        ),
+                        ],
                       ),
                     ),
                     Container(

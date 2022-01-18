@@ -1,12 +1,17 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 
 import 'package:flutter_request_ver2/src/model/Sponsor/OTD/CaNhanOTD.dart';
 import 'package:flutter_request_ver2/src/model/Sponsor/OTD/ChiTietOTD.dart';
 import 'package:flutter_request_ver2/src/model/Sponsor/OTD/DoanhNghiepOTD.dart';
 import 'package:flutter_request_ver2/src/model/Sponsor/OTD/SumSponsorOTD.dart';
+import 'package:flutter_request_ver2/src/model/Sponsor/OTD/transactionOTD.dart';
 import 'package:flutter_request_ver2/src/model/Sponsor/SponsorModel.dart';
+import 'package:flutter_request_ver2/src/utils/url.dart';
 
 import 'package:provider/provider.dart';
+import 'package:http/http.dart' as http;
 
 class SponsorController {
   SponsorController({this.context});
@@ -101,7 +106,7 @@ class SponsorController {
     return dataCaNhan;
   }
 
-  Future<List<DoanhNghiepOTD>> getAllDataDoanhNghiepSumSonsor(
+  Future<List<DoanhNghiepOTD>> getAllDataDoanhNghiepSumSonsor( // List sum , List = "", Lọc dữ liệu, add(list)
       List<SumSponsorOTD> dataSumSponsor) async {
     List<DoanhNghiepOTD> dataDoanhNghiep = [];
     dataSumSponsor.forEach((element) {
@@ -186,6 +191,25 @@ class SponsorController {
   void changeInitBuildMenuItem(int value) {
     Provider.of<SponsorModel>(context, listen: false)
         .selectedItem(context, value);
+  }
+
+  // Transaction
+  Future<List<TransactionOTD>> getBook() async {
+    var url = Uri.parse('${linkRequest}tx');
+    var response = await http.get(url);
+    print('Response status: ${response.statusCode}');
+    print('Response body: ${response.body}');
+    if (response.statusCode != 200) {
+      return null;
+    }
+    if (jsonDecode(response.body)['err'] != 0) {
+      return null;
+    }
+    List<TransactionOTD> data = (jsonDecode(response.body)['data'] as List)
+        .map((e) => TransactionOTD.fromJson(e))
+        .toList();
+
+    return data;
   }
 }
 

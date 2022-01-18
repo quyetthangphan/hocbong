@@ -63,7 +63,7 @@ class _SponsorScaffoldDesktopState extends State<SponsorScaffoldDesktop> {
                     InkWell(
                       onTap: () {},
                       child: Link(
-                        url: 'http://192.168.31.86:5000/signup',
+                        url: 'http://sponsorlhu.herokuapp.com/signup',
                         child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 15),
                           child: Text(
@@ -77,7 +77,7 @@ class _SponsorScaffoldDesktopState extends State<SponsorScaffoldDesktop> {
                     InkWell(
                       onTap: () {},
                       child: Link(
-                        url: 'http://192.168.31.86:5000/transfer',
+                        url: 'http://sponsorlhu.herokuapp.com/transfer',
                         child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 15),
                           child: Text(
@@ -87,12 +87,6 @@ class _SponsorScaffoldDesktopState extends State<SponsorScaffoldDesktop> {
                           ),
                         ),
                       ),
-                    ),
-                    MenuItems(
-                      title: "Lịch sử",
-                      press: () {
-                        sponsorController.changeInitPageHome(5);
-                      },
                     ),
                     Container(
                       //color: Colors.amber,

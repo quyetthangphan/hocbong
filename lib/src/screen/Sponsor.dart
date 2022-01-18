@@ -18,6 +18,8 @@ class _SponsorState extends State<Sponsor> {
   @override
   void initState() {
     super.initState();
+    // print(SponsorSheetAPI.init('sumSponsor')
+    //     .then((value) => SponsorSheetAPI.getAllSumSponsorData()));
     SponsorSheetAPI.init('sumSponsor').then((value) => {
           print('Loding data'),
           SponsorSheetAPI.getAllSumSponsorData().then(

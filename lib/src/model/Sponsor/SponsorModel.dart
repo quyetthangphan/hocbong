@@ -26,6 +26,7 @@ class SponsorModel extends ChangeNotifier {
   int initScreenDesktop = 0;
   int initPageQuy = 0;
   dynamic listQuy = [];
+
   CaNhanOTD loginCaNhan = null;
   DoanhNghiepOTD loginDoanhNghiep = null;
   void changeInitSponsor(int i) {

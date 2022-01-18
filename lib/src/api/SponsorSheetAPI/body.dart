@@ -42,15 +42,18 @@ class SponsorSheetAPI {
     }
   }
 
-  /// Method Communication Client vs Google Sheet Data
+  /// Method CommunicationN Client vs Google Sheet Data
 
   static Future<List<List<String>>> getAllSumSponsorData() async {
+    //print(await _sheetSumSponsor.values.allRows());
     if (_sheetSumSponsor == null) return null;
     return await _sheetSumSponsor.values.allRows();
   }
 
   static Future<List<Map<String, String>>> getAllChiTiet() async {
+    print(_sheetChiTiet.values.map.allRows());
     if (_sheetChiTiet == null) return null;
+
     return await _sheetChiTiet.values.map.allRows();
   }
 }

@@ -14,7 +14,6 @@ import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/page/ThongTi
 import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/page/ThongTinQuy/ThongTinQuyMobile/SponsorDanhSachCaNhan.dart';
 import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/page/ThongTinQuy/ThongTinQuyMobile/SponsorDanhSachDoanhNghiep.dart';
 import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/page/dangky/body.dart';
-import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/page/showlistthuhuong/body.dart';
 import 'package:flutter_request_ver2/src/screen/view/module/Sponsor/page/transaction/body.dart';
 
 class Config {
@@ -43,8 +42,5 @@ class Config {
     HomePageDesktop(),
     ThongTinQuyDeskTop(),
     BaiVietDesktop(),
-    DangKy(),
-    ShowListThuHuong(),
-    Transaction(),
   ];
 }

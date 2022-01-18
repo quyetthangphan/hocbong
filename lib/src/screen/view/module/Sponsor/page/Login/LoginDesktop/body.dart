@@ -141,14 +141,14 @@ class _ContainerScreenLoginState extends State<ContainerScreenLogin> {
                         sponsorController.changInitLoginPageCaNhan(value);
                       },
                     ),
-                    SizedBox(height: 16),
-                    TextField(
-                      decoration: const InputDecoration(
-                        border: OutlineInputBorder(),
-                        prefixIcon: Icon(Icons.lock),
-                        hintText: 'Password',
-                      ),
-                    ),
+                    // SizedBox(height: 16),
+                    // TextField(
+                    //   decoration: const InputDecoration(
+                    //     border: OutlineInputBorder(),
+                    //     prefixIcon: Icon(Icons.lock),
+                    //     hintText: 'Password',
+                    //   ),
+                    // ),
                   ],
                 ),
               ),

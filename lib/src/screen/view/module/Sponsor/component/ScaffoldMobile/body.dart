@@ -51,10 +51,10 @@ class _SponsorScafolldMobileState extends State<SponsorScaffoldMobile> {
         //     ),
         //   ),
         // ),
-        title: Text(
-          'SPONSOR',
-          style: TextStyle(color: colorTextSponsor),
-        ),
+        // title: Text(
+        //   'SPONSOR',
+        //   style: TextStyle(color: colorTextSponsor),
+        // ),
         actions: [
           Consumer<SponsorModel>(builder: (context, value, child) {
             if (value.loginCaNhan != null) {
